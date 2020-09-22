@@ -1,27 +1,11 @@
 apply plugin: 'com.android.application'
 
-buildscript {
-    repositories {
-        jcenter()
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.3'
-    }
-}
-
-repositories {
-    jcenter()
-    mavenCentral()
-}
-
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.0"
+    compileSdkVersion 29
 
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 25
+        targetSdkVersion 29
     }
 
     buildTypes {
@@ -31,18 +15,12 @@ android {
         }
     }
 
-    productFlavors {
-        defaultFlavor {
-            proguardFile 'proguard-rules.txt'
-        }
-    }
-
     lintOptions {
         abortOnError false
     }
 }
 
 dependencies {
-    compile files('libs/android-support-v4.jar')
-    compile project(':AndroidCharts')
+    implementation files('libs/android-support-v4.jar')
+    implementation project(':AndroidCharts')
 }

@@ -24,27 +24,12 @@ ext {
     allLicenses = ["MIT"]
 }
 
-buildscript {
-    repositories {
-        jcenter()
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.3'
-    }
-}
-
-repositories {
-    mavenCentral()
-}
-
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.1"
+    compileSdkVersion 29
 
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 25
+        targetSdkVersion 29
     }
 
     buildTypes {
@@ -55,5 +40,3 @@ android {
         }
     }
 }
-apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
-apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
